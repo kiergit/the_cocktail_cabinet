@@ -145,24 +145,6 @@ The application handles several possible errors:
 Users receive a friendly error page or message instead of
 seeing raw server errors.
 
-## GitHub
-
-To upload the project to GitHub:
-
-git init
-
-git add .
-
-git commit -m "Initial commit"
-
-git branch -M main
-
-git remote add origin YOUR_GITHUB_REPOSITORY_URL
-
-git push -u origin main
-
-Replace YOUR_GITHUB_REPOSITORY_URL with the URL of your GitHub repository.
-
 ## Author
 
 Kier Vincent Salano
