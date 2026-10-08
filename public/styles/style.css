@@ -1,0 +1,561 @@
+/* ================================
+   GLOBAL STYLES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: #151515;
+    --dark-soft: #242424;
+    --orange: #f47b3a;
+    --orange-dark: #d95e21;
+    --cream: #fff8ef;
+    --white: #ffffff;
+    --gray: #777;
+    --light-gray: #eeeeee;
+    --border: #e5e5e5;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--cream);
+    color: var(--dark);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.navbar {
+    width: 100%;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: white;
+}
+
+.nav-random {
+    color: white;
+    padding: 11px 20px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.nav-random:hover {
+    background: white;
+    color: var(--dark);
+}
+
+.dark-navbar {
+    background: var(--dark);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    color: white;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 680px;
+    color: white;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(244, 123, 58, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #151515 0%,
+            #292929 100%
+        );
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 80px auto 0;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1,
+.results-header h1 {
+    font-size: clamp(3rem, 7vw, 5.8rem);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
+}
+
+.hero h1 span,
+.results-header h1 span {
+    color: var(--orange);
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: auto;
+    color: #c8c8c8;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.search-form {
+    display: flex;
+    max-width: 650px;
+    margin: 40px auto 20px;
+    background: white;
+    padding: 7px;
+    border-radius: 60px;
+}
+
+.search-form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 16px 22px;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+.search-form button {
+    border: none;
+    background: var(--orange);
+    color: white;
+    font-weight: bold;
+    padding: 0 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-form button:hover {
+    background: var(--orange-dark);
+}
+
+.random-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 25px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.random-button:hover {
+    background: white;
+    color: var(--dark);
+}
+
+
+/* ================================
+   ERROR MESSAGE
+================================ */
+
+.error-message {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: rgba(255, 80, 80, 0.15);
+    border: 1px solid rgba(255, 100, 100, 0.3);
+    color: #ffb5b5;
+}
+
+
+/* ================================
+   HOME FEATURES
+================================ */
+
+.home-content {
+    padding: 80px 7%;
+}
+
+.features {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h2 {
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+
+/* ================================
+   RESULTS
+================================ */
+
+.results-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.results-header h1 {
+    color: var(--dark);
+    font-size: clamp(3rem, 6vw, 5rem);
+}
+
+.back-link {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.cocktail-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(330px, 1fr));
+    gap: 35px;
+}
+
+
+/* ================================
+   COCKTAIL CARD
+================================ */
+
+.cocktail-card {
+    overflow: hidden;
+    background: white;
+    border-radius: 25px;
+    border: 1px solid var(--border);
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.07);
+}
+
+.cocktail-image-container {
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cocktail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.cocktail-card:hover .cocktail-image {
+    transform: scale(1.04);
+}
+
+.cocktail-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 8px 13px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.cocktail-content {
+    padding: 30px;
+}
+
+.category {
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.cocktail-content h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   DETAILS
+================================ */
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.details > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.detail-icon {
+    font-size: 1.5rem;
+}
+
+.details small {
+    display: block;
+    color: var(--gray);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.details strong {
+    font-size: 0.85rem;
+}
+
+
+/* ================================
+   INGREDIENTS
+================================ */
+
+.section {
+    margin-top: 28px;
+}
+
+.section h3 {
+    margin-bottom: 15px;
+}
+
+.ingredients-list {
+    list-style: none;
+}
+
+.ingredients-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 11px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ingredient-name {
+    font-weight: 600;
+}
+
+.measurement {
+    color: var(--gray);
+    text-align: right;
+}
+
+.instructions {
+    color: #555;
+    line-height: 1.75;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.details-button {
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--dark);
+    color: white;
+    padding: 13px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.details-button:hover {
+    background: var(--orange);
+}
+
+
+/* ================================
+   ERROR PAGE
+================================ */
+
+.error-page {
+    background: var(--cream);
+}
+
+.error-container {
+    max-width: 650px;
+    margin: 120px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.error-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.error-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.error-container > p:not(.eyebrow) {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 35px 20px;
+    text-align: center;
+    background: var(--dark);
+    color: #888;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-random {
+        display: none;
+    }
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        margin-top: 60px;
+    }
+
+    .hero h1,
+    .results-header h1 {
+        letter-spacing: -2px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        background: transparent;
+        gap: 10px;
+    }
+
+    .search-form input {
+        width: 100%;
+        padding: 17px;
+        border-radius: 12px;
+    }
+
+    .search-form button {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .cocktail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .cocktail-image-container {
+        height: 280px;
+    }
+
+    .cocktail-content {
+        padding: 22px;
+    }
+
+    .cocktail-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .ingredients-list li {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .measurement {
+        text-align: left;
+    }
+}

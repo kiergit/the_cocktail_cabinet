@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> The Cocktail Cabinet</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <nav class="navbar">
+            <a href="/" class="logo">🍹 The Cocktail Cabinet</a>
+            
+            <a href="/random" class="nav-random">
+                Random Cocktail
+            </a>
+        </nav>
+
+        <div class="hero-content">
+
+            <p class="eyebrow">DISCOVER SOMETHING NEW</p>
+
+            <h1>
+                Find your next
+                <span>favorite cocktail.</span>
+            </h1>
+
+            <p class="hero-description">
+                Search thousands of cocktails and discover
+                ingredients, preparation instructions, and more.
+            </p>
+
+            <form action="/search" method="GET" class="search-form">
+
+                <input
+                    type="text"
+                    name="cocktail"
+                    placeholder="Search for a cocktail..."
+                    aria-label="Cocktail name"
+                    required
+                >
+
+                <button type="submit">
+                   Search
+                </button>
+
+            </form>
+
+            <% if (error) { %>
+
+                <div class="error-message">
+                    ⚠️ <%= error %>
+                </div>
+
+            <% } %>
+
+            <a href="/random" class="random-button">
+                Surprise Me
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main class="home-content">
+
+        <section class="features">
+
+            <div class="feature-card">
+                <div class="feature-icon">🔎</div>
+
+                <h2>Search</h2>
+
+                <p>
+                    Search for cocktails by name and
+                    discover new drinks.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🥃</div>
+
+                <h2>Explore</h2>
+
+                <p>
+                    Learn about ingredients, glassware,
+                    categories, and alcohol content.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+
+                <h2>Learn</h2>
+
+                <p>
+                    Get step-by-step instructions for
+                    preparing your chosen cocktail.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            The Cocktail Cabinet &copy; 2026
+        </p>
+
+        <p>
+            Powered by TheCocktailDB API
+        </p>
+    </footer>
+
+</body>
+</html>
