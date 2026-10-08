@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Results | The Cocktail Cabinet</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar dark-navbar">
+
+        <a href="/" class="logo">
+            🍹 The Cocktail Cabinet
+        </a>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/random">🎲 Random</a>
+        </div>
+
+    </nav>
+
+
+    <main class="results-container">
+
+        <div class="results-header">
+
+            <p class="eyebrow">COCKTAIL DISCOVERY</p>
+
+            <h1>
+                Your Cocktail
+                <span>Results</span>
+            </h1>
+
+            <a href="/" class="back-link">
+                ← Search for another cocktail
+            </a>
+
+        </div>
+
+
+        <section class="cocktail-grid">
+
+            <% cocktails.forEach(cocktail => { %>
+
+                <article class="cocktail-card">
+
+                    <div class="cocktail-image-container">
+
+                        <img
+                            src="<%= cocktail.image %>"
+                            alt="<%= cocktail.name %>"
+                            class="cocktail-image"
+                        >
+
+                        <div class="cocktail-badge">
+                            <%= cocktail.alcoholic %>
+                        </div>
+
+                    </div>
+
+
+                    <div class="cocktail-content">
+
+                        <p class="category">
+                            <%= cocktail.category %>
+                        </p>
+
+                        <h2>
+                            <%= cocktail.name %>
+                        </h2>
+
+
+                        <div class="details">
+
+                            <div>
+                                <span class="detail-icon">🥃</span>
+
+                                <div>
+                                    <small>Glass</small>
+                                    <strong>
+                                        <%= cocktail.glass %>
+                                    </strong>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="detail-icon">🍸</span>
+
+                                <div>
+                                    <small>Type</small>
+                                    <strong>
+                                        <%= cocktail.alcoholic %>
+                                    </strong>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="section">
+
+                            <h3>Ingredients</h3>
+
+                            <ul class="ingredients-list">
+
+                                <% cocktail.ingredients.forEach(item => { %>
+
+                                    <li>
+                                        <span class="ingredient-name">
+                                            <%= item.ingredient %>
+                                        </span>
+
+                                        <span class="measurement">
+                                            <%= item.measure %>
+                                        </span>
+                                    </li>
+
+                                <% }) %>
+
+                            </ul>
+
+                        </div>
+
+
+                        <div class="section">
+
+                            <h3>Instructions</h3>
+
+                            <p class="instructions">
+                                <%= cocktail.instructions %>
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="/cocktail/<%= cocktail.id %>"
+                            class="details-button"
+                        >
+                            View Cocktail →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            <% }) %>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>The Cocktail Cabinet &copy; 2026</p>
+
+        <p>Powered by TheCocktailDB API</p>
+    </footer>
+
+</body>
+</html>
