@@ -1,6 +1,6 @@
-# 🍹 Cocktail Explorer
+# 🍹 The Cocktail Cabinet
 
-Cocktail Explorer is a Node.js and Express web application that uses
+The Cocktail Cabinet is a Node.js and Express web application that uses
 TheCocktailDB public API to allow users to search for cocktails and
 discover their ingredients, instructions, glass type, category, and
 alcoholic status.
