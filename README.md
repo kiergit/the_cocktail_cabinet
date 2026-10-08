@@ -37,25 +37,6 @@ API documentation:
 
 https://www.thecocktaildb.com/api.php
 
-## Project Structure
-
-Capstone Project/
-│
-├── public/
-│   └── styles/
-│       └── style.css
-│
-├── views/
-│   ├── cocktail.ejs
-│   ├── error.ejs
-│   └── index.ejs
-│
-├── .gitignore
-├── index.js
-|── package-lock.json
-├── package.json
-└── README.md
-
 ## Installation
 
 Clone or download this project.
